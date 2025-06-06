@@ -11,7 +11,7 @@ html, body {
   line-height: 1.6;
   font-size: 16px;
   overflow-x: hidden;
-  padding-top: 100px;
+  padding-top: 100px; /* для фиксированного header */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -38,6 +38,12 @@ header .container {
 
 main, .contacts-main {
   padding-top: 80px;
+  max-width: 1400px;
+  margin: 0 auto 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  flex-grow: 1;
+  width: 100%;
 }
 
 .logo {
@@ -83,14 +89,6 @@ main, .contacts-main {
   .nav a {
     font-size: 16px;
   }
-}
-
-main {
-  max-width: 1400px;
-  margin: 0 auto 60px;
-  padding: 0 40px;
-  flex-grow: 1;
-  width: 100%;
 }
 
 h1 {
