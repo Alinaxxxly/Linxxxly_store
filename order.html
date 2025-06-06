@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Оформление заказа | LINXXXLY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style_order.css" />
+  <script src="./js/script_order.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">LINXXXLY</a>
+      <nav class="nav" aria-label="Основное меню">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="cart.html">Корзина</a>
+        <a href="reviews.html">Отзывы</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Оформление заказа</h1>
+
+    <section id="order-items" aria-label="Список товаров для заказа"></section>
+
+    <div class="total-price" id="total-price" aria-live="polite"></div>
+
+    <form id="order-form" novalidate>
+      <div class="form-section">
+        <h2>Ваши данные</h2>
+        <p class="form-description">Пожалуйста, укажите корректную информацию для связи и доставки.</p>
+    
+        <div class="form-group">
+          <label for="fullname">
+            <span>👤 ФИО</span>
+          </label>
+          <input id="fullname" type="text" name="fullname" required autocomplete="name" placeholder="Бакуменко Алина Дмитриевна" />
+        </div>
+    
+        <div class="form-group">
+          <label for="phone">
+            <span>📞 Телефон</span>
+          </label>
+          <input 
+            id="phone" 
+            type="tel" 
+            name="phone" 
+            required 
+            pattern="^\+?\d{10,15}$" 
+            placeholder="+7XXXXXXXXXX" 
+            autocomplete="tel"
+          />
+        </div>
+    
+        <div class="form-group">
+          <label for="address">
+            <span>🏠︎ Адрес доставки</span>
+          </label>
+          <input id="address" type="text" name="address" placeholder="г. Санкт-Петербург, ул. Пример, д. 1" />
+        </div>
+        <button type="submit" class="submit-btn"> Подтвердить заказ</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Linxxxly | Все права защищены</p>
+  </footer>
+  
+</body>
+</html>
