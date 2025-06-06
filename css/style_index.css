@@ -324,6 +324,18 @@ footer p {
     height: auto;
     max-height: 300px;
   }
+  .hero h1 {
+    font-size: 32px;
+  }
+  
+  .hero p {
+    font-size: 16px;
+  }
+  
+  .hero-button-container .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 480px) {

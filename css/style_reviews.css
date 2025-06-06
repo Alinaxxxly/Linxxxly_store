@@ -11,6 +11,7 @@ body {
   overflow-x: hidden;
 }
 
+/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -21,19 +22,20 @@ header {
 }
 
 header .container {
+  max-width: 1400px;
   height: 80px;
+  margin: 0 auto;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 40px;
 }
 
 main, .contacts-main {
   padding-top: 80px;
 }
 
+/* NAVIGATION */
 .logo {
   color: #f64287;
   font-size: 32px;
@@ -47,7 +49,6 @@ main, .contacts-main {
   gap: 30px;
   flex-wrap: nowrap;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 .nav a {
@@ -62,30 +63,7 @@ main, .contacts-main {
   color: #ff4d91;
 }
 
-@media screen and (max-width: 480px) {
-  header {
-    height: 60px;
-  }
-
-  header .container {
-    height: 60px;
-    padding: 0 15px;
-  }
-
-  .logo {
-    font-size: 20px;
-  }
-
-  .nav {
-    gap: 10px;
-  }
-
-  .nav a {
-    font-size: 14px;
-    padding: 8px 5px;
-  }
-}
-
+/* REVIEWS SECTION */
 .reviews-section {
   margin-top: 120px;
   padding: 50px 20px;
@@ -110,6 +88,7 @@ main, .contacts-main {
   }
 }
 
+/* CAROUSEL */
 .carousel-wrapper {
   width: 1240px;
   margin: 0 auto;
@@ -129,12 +108,12 @@ main, .contacts-main {
 }
 
 .review-card {
-  background-color: #1c1c1c;
-  border-radius: 10px;
   flex: 0 0 600px;
   min-height: 480px;
   padding: 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -169,7 +148,7 @@ main, .contacts-main {
 
 .review-text {
   max-width: 500px;
-  margin: 20px auto 0 auto;
+  margin: 20px auto 0;
   font-size: 20px;
   line-height: 1.6;
   flex-grow: 1;
@@ -179,11 +158,12 @@ main, .contacts-main {
 
 .review-date {
   font-size: 16px;
-  color: #ffffff;
+  color: #fff;
   text-align: right;
   margin-top: 20px;
 }
 
+/* BUTTONS */
 .carousel-button {
   position: absolute;
   top: 50%;
@@ -198,7 +178,7 @@ main, .contacts-main {
   user-select: none;
   transition: background-color 0.3s ease;
   z-index: 10;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-button:hover:not(:disabled) {
@@ -218,6 +198,7 @@ main, .contacts-main {
   right: 10px;
 }
 
+/* FOOTER */
 footer {
   background-color: #000;
   color: #fff;
@@ -226,19 +207,16 @@ footer {
   margin-top: 50px;
 }
 
+/* RESPONSIVE */
 @media (max-width: 900px) {
-  .reviews-section h1 {
-    font-size: 36px;
-  }
-
   .reviews-container {
     gap: 12px;
   }
 
   .review-card {
     flex: 0 0 90vw;
-    min-height: auto;
     padding: 20px;
+    min-height: auto;
   }
 
   .carousel-wrapper {
@@ -259,8 +237,88 @@ footer {
   .review-card {
     padding: 25px;
   }
+
   .review-text {
     font-size: 18px;
     line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    height: 60px;
+  }
+
+  header .container {
+    height: 60px;
+    padding: 0 15px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav {
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 14px;
+    padding: 8px 5px;
+  }
+
+  .reviews-section {
+    padding: 30px 10px;
+  }
+
+  .reviews-section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .carousel-wrapper {
+    padding: 0 10px;
+  }
+
+  .reviews-container {
+    gap: 10px;
+  }
+
+  .review-card {
+    flex: 0 0 95vw;
+    padding: 20px 15px;
+  }
+
+  .review-top img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  .reviewer-info h3 {
+    font-size: 18px;
+  }
+
+  .review-text {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .review-date {
+    font-size: 14px;
+  }
+
+  .carousel-button {
+    font-size: 24px;
+    padding: 8px 12px;
+  }
+
+  .carousel-button.prev {
+    left: 0;
+  }
+
+  .carousel-button.next {
+    right: 0;
   }
 }
