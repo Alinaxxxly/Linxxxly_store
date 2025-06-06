@@ -68,9 +68,6 @@ main {
 }
 
 .hero {
-  background-image: url('https://via.placeholder.com/1500x800/ff4d91/000000?text=Jewels+Shop');
-  background-size: cover;
-  background-position: center;
   height: 70vh;
   display: flex;
   justify-content: center;
